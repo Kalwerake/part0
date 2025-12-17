@@ -79,24 +79,5 @@ sequenceDiagram
     server-->>browser: 201 Created no redirect json message {"message":"note created"}
     deactivate server
 
-    Note righet of browser: browser sends a json payload {content: "df", date: "2025-12-17T16:34:49.382Z"}
-
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
-    activate server
-    server-->>browser: the css file
-    deactivate server
-
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa.js
-    activate server
-    server-->>browser: the JavaScript file
-    deactivate server
-
-    Note right of browser: The browser starts executing the JavaScript code that fetches the JSON from the server
-
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
-    activate server
-    server-->>browser: [{"content": "", "date": "2025-12-17T09:26:24.237Z"}, ... ]
-    deactivate server
-
-    Note right of browser: The browser executes the callback function that renders the notes
+    Note right of browser: browser sends a json payload {content: "df", date: "2025-12-17T16:34:49.382Z"}
 ```
